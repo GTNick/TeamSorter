@@ -1,0 +1,9 @@
+name: TeamSorter
+author: BoxOfDevs Team
+authors:
+- TheDragonRing
+api:
+- 1.14.2
+- 2.0.0
+main: BoxOfDevs\TeamSorter
+website: http://software.boxofdevs.ml/

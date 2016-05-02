@@ -1,0 +1,6 @@
+---
+
+# Set the world you wanted players to be sorted into teams in here.
+TeamSortedWorld: "WorldName"
+
+...
