@@ -6,10 +6,10 @@ Configuration
 ==============
 Any options in the config.yml you should know about:
 
-# Set the world you wanted players to be sorted into teams in here, you can set as many as you like.
-TeamSortedWorlds:
-- "WorldOneName"
-- "WorldTwoName"
+    # Set the world you wanted players to be sorted into teams in here, you can set as many as you like.
+    TeamSortedWorlds:
+    - "WorldOneName"
+    - "WorldTwoName"
 
 Authors
 ========
