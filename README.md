@@ -13,7 +13,7 @@ TeamSortedWorlds:
 
 Authors
 ========
-The BoxOfDevs Team members who have contributed and devleloped BoxOfBits:
+The BoxOfDevs Team members who have contributed and devleloped TeamSorter:
 
     - TheDragonRing
 
