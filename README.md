@@ -1,21 +1,14 @@
 Description
 ============
-Ever needed to sort your players into 2 even teams for TeamPVP? Use this! It sorts players in a certain world into either Red Team or Green Team, making sure there are an even amount of players in each players nametags are changed to the colour of their team, and they can't hurt other members of their team!
-
-Configuration
-==============
-Any options in the config.yml you should know about:
-
-    # Set the world you wanted players to be sorted into teams in here, you can set as many as you like.
-    TeamSortedWorlds:
-    - "WorldOneName"
-    - "WorldTwoName"
+Ever needed to sort your players into 2 even teams for TeamPVP? Use this! It sorts players into either Red Team or Blue Team, making sure there are an even amount of players in each players nametags are changed to the colour of their team, and they can't hurt other members of their team!
 
 Authors
 ========
 The BoxOfDevs Team members who have contributed and devleloped TeamSorter:
 
     - TheDragonRing
+
+    - UltimateMcraft
 
 Usage
 ======
