@@ -4,7 +4,7 @@ Ever needed to sort your players into 2 even teams for TeamPVP? Use this! It sor
 
 Authors
 ========
-The BoxOfDevs Team members who have contributed and devleloped TeamSorter:
+The BoxOfDevs Team members who have contributed and developed TeamSorter:
 
     - TheDragonRing
 
