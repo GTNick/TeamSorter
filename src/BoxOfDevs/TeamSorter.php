@@ -10,6 +10,7 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\command\PluginCommand;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\utils\Config;
@@ -29,7 +30,7 @@ class TeamSorter extends PluginBase implements Listener{
         $this->getLogger()->info(TF::GREEN . "TeamSorter Enabled!");
     }
 
-    public function onJoin(){
+    public function onBoth(PlayerJoinEvent $joinevent && PlayerRespawnEvent $event){
         $data = new Config($this->getDataFolder . "data.yml", Config::YAML);
         $red = $data->get("RedTeam");
         $blue = $data->get("BlueTeam");
@@ -37,7 +38,7 @@ class TeamSorter extends PluginBase implements Listener{
         $name = $player->getName();
         $playername = $name;
         if($red = $blue){
-            $event->setJoinMessage($name . "joined the" . TF::DARK_RED . "RED" . TF::WHITE . "team!");
+            $joinevent->setJoinMessage($name . "joined the" . TF::DARK_RED . "RED" . TF::WHITE . "team!");
             $player->setDisplayName(TF::DARK_RED . $name);
             $redhelmet = Item::get(298);
             $tempTag = new CompoundTag("", []);
@@ -64,7 +65,7 @@ class TeamSorter extends PluginBase implements Listener{
             $data->set("RedTeamMembers", $playername);
             $data->save();
         }elseif($red > $blue){
-            $event->setJoinMessage($name . "joined the" . TF::AQUA . "BLUE" . TF::WHITE . "team!");
+            $joinevent->setJoinMessage($name . "joined the" . TF::AQUA . "BLUE" . TF::WHITE . "team!");
             $player->setDisplayName(TF::AQUA . $name);
             $bluehelmet = Item::get(298);
             $tempTag = new CompoundTag("", []);
@@ -91,7 +92,7 @@ class TeamSorter extends PluginBase implements Listener{
             $data->set("BlueTeamMembers", $playername);
             $data->save();
         }elseif($red < $blue){
-            $event->setJoinMessage($name . "joined the" . TF::DARK_RED . "RED" . TF::WHITE . "team!");
+            $joinevent->setJoinMessage($name . "joined the" . TF::DARK_RED . "RED" . TF::WHITE . "team!");
             $player->setDisplayName(TF::DARK_RED . $name);
             $redhelmet = Item::get(298);
             $tempTag = new CompoundTag("", []);
