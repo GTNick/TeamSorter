@@ -9,4 +9,15 @@ api:
 - 1.14.2
 - 2.0.0
 main: TeamSorter\Main
-website: http://software.boxofdevs.ml/
+website: http://boxofdevs.ml/software
+commands:
+    changeteam:
+        usage: "/changeteam red|blue [player]"
+        description: "Changes yours or another players team"
+        permission: teamsorter.change
+permissions:
+    teamsorter:
+        default: false
+        children:
+            teamsorter.change:
+                default: OP
