@@ -32,13 +32,18 @@ class TeamSorter extends PluginBase implements Listener{
         $data = new Config($this->getDataFolder . "data.yml", Config::YAML);
         $red = $data->get("RedTeam");
         $blue = $data->get("BlueTeam");
+        $player = $event->getPlayer();
+        $name = $player->getName();
         if($red = $blue){
+            $player->setDisplayName(TF::DARK_RED . $name);
             $data->set("RedTeam", $red + 1);
             $data->save();
         }elseif($red > $blue){
+            $player->setDisplayName(TF::AQUA . $name);
             $data->set("BlueTeam", $blue + 1);
             $data->save();
         }elseif($red < $blue){
+            $player->setDisplayName(TF::DARK_RED . $name);
             $data->set("RedTeam", $red + 1);
             $data->save();
         }
