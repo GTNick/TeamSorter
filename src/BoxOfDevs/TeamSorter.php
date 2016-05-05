@@ -25,8 +25,7 @@ class TeamSorter extends PluginBase implements Listener{
         $data->set("RedTeam", 0);
         $data->set("BlueTeam", 0);
         $data->save();
-        $this->getLogger()->info("TeamSorter Enabled!");
-        $this->getLogger()->info("Note: TeamSorter will not work without Teams Colour PVP by @KaitoDoDo");
+        $this->getLogger()->info(TF::GREEN . "TeamSorter Enabled!");
     }
 
     public function onJoin(){
@@ -93,7 +92,7 @@ class TeamSorter extends PluginBase implements Listener{
         $data->remove("RedTeamMembers");
         $data->remove("BlueTeamMembers");
         $data->save();
-        $this->getLogger()->info("TeamSorter Disabled!");
+        $this->getLogger()->info(TF::DARK_RED . "TeamSorter Disabled!");
     }
 
 }
