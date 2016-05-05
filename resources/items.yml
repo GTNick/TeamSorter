@@ -1,0 +1,9 @@
+---
+
+# Any items that you want a player to get whenever they join or respawn. Format = "ID:DAMAGE:AMOUNT". Add as many as you want :)
+
+Items:
+- "272:0:1"
+- "260:0:32"
+
+...

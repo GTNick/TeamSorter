@@ -26,6 +26,13 @@ class TeamSorter extends PluginBase implements Listener{
         $data = new Config($this->getDataFolder . "data.yml", Config::YAML);
         $data->set("RedTeam", 0);
         $data->set("BlueTeam", 0);
+        $items = $data->get("Items");
+        $num = 0;
+        foreach($items as $i){
+            $r = explode(":",$i);
+            $this->itemdata[$num] = array($r[0],$r[1],$r[2]);
+            $num++;
+        }
         $data->save();
         $this->getLogger()->info(TF::GREEN . "TeamSorter Enabled!");
     }
@@ -37,6 +44,10 @@ class TeamSorter extends PluginBase implements Listener{
         $player = $event->getPlayer();
         $name = $player->getName();
         $playername = $name;
+        foreach($this->itemdata as $i){
+            $item = new Item($i[0],$i[1],$i[2]);
+            $player->getInventory()->addItem($item);
+        }
         if($red = $blue){
             $joinevent->setJoinMessage($name . "joined the" . TF::DARK_RED . "RED" . TF::WHITE . "team!");
             $player->setDisplayName(TF::DARK_RED . $name);
@@ -109,7 +120,7 @@ class TeamSorter extends PluginBase implements Listener{
             $tempTag->customColor = new IntTag("Red Leggings", 16711680);
             $redleggings->setCompoundTag($tempTag);
             $player->getInventory()->setLeggings($redleggings);
-            $redboots = Item::get(30-);
+            $redboots = Item::get(301);
             $tempTag = new CompoundTag("", []);
             $tempTag->customColor = new IntTag("Red Boots", 16711680);
             $redboots->setCompoundTag($tempTag);
@@ -121,7 +132,7 @@ class TeamSorter extends PluginBase implements Listener{
         }
     }
 
-    public function onDamage(EntityDamageEvent $event) {
+    public function onDamage(EntityDamageEvent $event){
         if($event instanceof EntityDamageByEntityEvent && $event->getDamager() instanceof Player){
             $player = $event->getPlayer();
             $playername = $player->getName();

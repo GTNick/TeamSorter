@@ -3,8 +3,10 @@ author: BoxOfDevs Team
 authors:
 - TheDragonRing
 - UltimateMcraft
+version: 1.0
+description: Ever needed a mult-feature TeamPVP plugin?
 api:
 - 1.14.2
 - 2.0.0
-main: BoxOfDevs\TeamSorter
+main: TeamSorter\Main
 website: http://software.boxofdevs.ml/
