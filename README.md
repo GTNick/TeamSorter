@@ -10,6 +10,6 @@ The BoxOfDevs Team members who have contributed and developed TeamSorter:
 
     - UltimateMcraft
 
-Usage
-======
+Usage & Installation
+=====================
 This is a plugin for ImagicalMine: MCPE Server Software (https://imagicalmine.net/), and can be downloaded from http://software.boxofdevs.ml/. Once you have downloaded the TeamSorter_v1.0.phar simply stick it into your plugins folder, and you are just about done! Note that this plugin requires Teams Colour PVP by @KaitoDoDo (https://forums.imagicalmine.net/plugins/teams-colour-pvp.106/).
