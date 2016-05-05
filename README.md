@@ -12,4 +12,4 @@ The BoxOfDevs Team members who have contributed and developed TeamSorter:
 
 Usage
 ======
-This is a plugin for ImagicalMine: MCPE Server Software (https://imagicalmine.net/), and can be downloaded from http://software.boxofdevs.ml/. Once you have downloaded the TeamSorter_v1.0.phar simply stick it into your plugins folder, set the name of the world in the configuration file, and you are almost done! Note that this plugin requires Teams Colour PVP by @Kaito (https://forums.imagicalmine.net/plugins/teams-colour-pvp.106/).
+This is a plugin for ImagicalMine: MCPE Server Software (https://imagicalmine.net/), and can be downloaded from http://software.boxofdevs.ml/. Once you have downloaded the TeamSorter_v1.0.phar simply stick it into your plugins folder, set the name of the world in the configuration file, and you are almost done! Note that this plugin requires Teams Colour PVP by @KaitoDoDo (https://forums.imagicalmine.net/plugins/teams-colour-pvp.106/).
