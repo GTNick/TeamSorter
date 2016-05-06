@@ -19,7 +19,7 @@ use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener, CommandExecutor{
     
     const NAME = "TeamSorter";
     const AUTHOR = "BoxOfDevs Team";
@@ -49,7 +49,8 @@ class Main extends PluginBase implements Listener{
     
     public function getPrefix(){
         $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-        $prefix = $config->get("Prefix");
+        $text = $config->get("Prefix");
+        $prefix = $this->FormatText($text);
         return $prefix;
     }
 
