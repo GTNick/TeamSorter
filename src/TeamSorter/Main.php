@@ -178,7 +178,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
     }
     
     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
-        if(strolower($cmd->getName() == "changeteam")){
+        if(strtolower($cmd->getName() == "changeteam")){
             $data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
             if(!$sender instanceof Player){
 				if(!isset($args[1])){
