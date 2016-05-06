@@ -19,7 +19,7 @@ use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class TeamSorter extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener{
     
     const NAME = "TeamSorter";
     const AUTHOR = "BoxOfDevs Team";
