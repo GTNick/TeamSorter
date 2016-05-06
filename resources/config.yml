@@ -6,4 +6,8 @@ Items:
 - "272:0:1"
 - "260:0:32"
 
+# The prefix that you want to show with all TeamSorter's broadcasts and messages. Use & or § to colour the text.
+
+Prefix: "§0[§aTeamSorter§0]"
+
 ...

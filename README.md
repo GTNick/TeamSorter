@@ -22,13 +22,19 @@ Anything you might need to know about configureing this:
 
     WARNING: Whatever you do, do not edit data.yml, it will mess up your TeamPVP!
 
-    items.yml -> Items
+    config.yml -> Items
 
     # Any items that you want a player to get whenever they join or respawn. Format = "ID:DAMAGE:AMOUNT". Add as many as you want :), Example below!
 
     Items:
     - "272:0:1"
     - "260:0:32"
+
+    config.yml -> Prefix
+
+    # The prefix that you want to show with all TeamSorter's broadcasts and messages. Use & or § to colour the text.
+
+    Prefix: "§0[§aTeamSorter§0]"
 
 Usage & Installation
 =====================

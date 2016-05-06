@@ -31,10 +31,12 @@ class TeamSorter extends PluginBase implements Listener && CommandExecutor{
     public function onEnable(){
         @mkdir($this->getDataFolder());
         $this->saveResource("data.yml");
+        $this->saveResource("config.yml");
+        $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         $data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
         $data->set("RedTeam", 0);
         $data->set("BlueTeam", 0);
-        $items = $data->get("Items");
+        $items = $config->get("Items");
         $num = 0;
         foreach($items as $i){
             $r = explode(":",$i);
@@ -46,8 +48,9 @@ class TeamSorter extends PluginBase implements Listener && CommandExecutor{
     }
     
     public function getPrefix(){
-        $data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
-        return $data->get("Prefix");
+        $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        $prefix = $config->get("Prefix");
+        return $prefix;
     }
 
     public function onBoth(PlayerJoinEvent $joinevent && PlayerRespawnEvent $event){
