@@ -53,7 +53,7 @@ class TeamSorter extends PluginBase implements Listener{
         return $prefix;
     }
 
-    public function onBoth(PlayerJoinEvent $joinevent && PlayerRespawnEvent $event){
+    public function onBoth(PlayerJoinEvent $joinevent, PlayerRespawnEvent $event){
         $data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
         $red = $data->get("RedTeam");
         $blue = $data->get("BlueTeam");
